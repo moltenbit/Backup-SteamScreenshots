@@ -1,4 +1,4 @@
-# Steam-Screenshot-Backup
+# Backup-SteamScreenshots
 A script to backup your Steam screenshot folders.
 
 <br/>
