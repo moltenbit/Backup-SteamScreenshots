@@ -1,5 +1,6 @@
 $steamBasePath = Get-ItemPropertyValue -Path 'HKLM:\SOFTWARE\WOW6432Node\Valve\Steam\' -Name InstallPath
 $getSteamDir = "$steamBasePath\userdata"
+Write-Host -ForegroundColor Green "Using $getSteamDir as the Steam installation path."
 
 $screenshotPaths = (Get-ChildItem -Path $steamDir -Recurse -Directory | Where-Object { $_.PSIsContainer -eq $true -and $_.Name -match "screenshot"}).FullName
 
