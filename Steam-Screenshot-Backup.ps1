@@ -1,11 +1,5 @@
-Write-Host -ForegroundColor Green "Press Y if you use the default Steam installation path ( C:\Program Files (x86)\Steam\userdata ), otherwise paste your Steam userdata folder path:" 
-$getSteamDir = Read-Host 
-
-if ($getSteamDir -eq "y" -or $getSteamDir -eq "Y"){
-	$steamDir = "C:\Program Files (x86)\Steam\userdata"
-} else {
-	$steamDir = $getSteamDir
-}
+$steamBasePath = Get-ItemPropertyValue -Path 'HKLM:\SOFTWARE\WOW6432Node\Valve\Steam\' -Name InstallPath
+$getSteamDir = "$steamBasePath\userdata"
 
 $screenshotPaths = (Get-ChildItem -Path $steamDir -Recurse -Directory | Where-Object { $_.PSIsContainer -eq $true -and $_.Name -match "screenshot"}).FullName
 
