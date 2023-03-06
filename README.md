@@ -6,7 +6,7 @@ A script to backup your Steam screenshot folders.
 ### Usage
 Either run the powershell script with...
 ```
-PS C:\Temp\Scripts> .\Steam-Screenshot-Backup.ps1
+PS C:\Temp\Scripts> .\Backup-SteamScreenshots.ps1 -DestinationPath C:\Your\Backup\Path
 ```
 
 ... or run the .exe file.
@@ -17,14 +17,14 @@ PS C:\Temp\Scripts> .\Steam-Screenshot-Backup.ps1
 
 Powershell
 
-![example-run-powershell](https://user-images.githubusercontent.com/31832259/222961347-f9895fc9-1ab3-46fb-926f-a1556812533f.png)
-
+![powershell](https://user-images.githubusercontent.com/31832259/223235491-4a8e4fff-2c2f-4855-a241-98e0346ac313.png)
 
 <br/>
 
 Executable
 
-![example-run-exe](https://user-images.githubusercontent.com/31832259/222961352-40d2c68f-a895-4bc5-b1e6-5d25ff0be733.png)
+![exe](https://user-images.githubusercontent.com/31832259/223235523-77792878-1c25-4d98-a473-11c7e5c2a831.png)
+
 
 
 
