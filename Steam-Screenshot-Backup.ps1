@@ -6,6 +6,19 @@
    screenshot-folders and copies the images and folders to the destination path passed by the parameter.
 .EXAMPLE
    PS C:\Temp> .\Backup-SteamScreenshots -DestinationPath C:\MyBackups
+
+   Results in:
+
+   		C:/
+   		\- MyBackups/
+   		\  \- Backup-SteamScreenshot-2023-03-06/
+   		\  \  \- 123456-screenshots/
+   		\  \  \  \- screenshot1.jpg
+   		\  \  \  \- screenshot2.jpg
+   		\  \  \- 234567-screenshots/
+   		\  \  \  \- screenshot3.jpg
+   		\  \  \- 345678-screenshots/
+   		\  \  \  \- screenshot4.jpg
 .Parameter DestinationPath
    [Mandatory!] Full destination path where the archive should be saved to.
 .NOTES
