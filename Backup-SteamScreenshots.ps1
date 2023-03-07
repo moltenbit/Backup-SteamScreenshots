@@ -2,7 +2,7 @@
 .Synopsis
    Backup script for copying your Steam screenshots.
 .DESCRIPTION
-   This script uses the Steam install path found in the registry to look for all folders in \userdata containing 
+   This script uses the Steam install path found in the registry to look for all folders in \userdata containing
    screenshot-folders and copies the images and folders to the destination path passed by the parameter.
 .EXAMPLE
    PS C:\Temp> .\Backup-SteamScreenshots -DestinationPath C:\MyBackups
@@ -38,16 +38,16 @@ $SteamUserdataDir = "$($SteamInstallPath + '\userdata')"
 $BackupPath = "$($DestinationPath + '\Backup-SteamScreenshots-' + $Date)"
 $ScreenshotFolders = (Get-ChildItem -Path $SteamUserdataDir -Recurse -Directory | Where-Object {$_.Name -match "screenshot"}).FullName
 
-Write-Host -ForegroundColor DarkGreen "> Starting Backup-SteamScreenshots.`n> Using $SteamUserdataDir as the Steam installation path."
+Write-Information -ForegroundColor DarkGreen "> Starting Backup-SteamScreenshots.`n> Using $SteamUserdataDir as the Steam installation path."
 
 if (-Not (Test-Path $BackupPath)) {
 	foreach ($Path in $ScreenshotFolders) {
-		
+
 		$ParentDirName = (Get-Item $Path).Parent.Name
-		
+
 		try {
 			Copy-Item -Path $Path -Destination $BackupPath\$Parentdirname-screenshots -Recurse
-			Write-Host -ForegroundColor DarkGreen "> Copying $Path to $BackupPath\$Parentdirname-screenshots"
+			Write-Information -ForegroundColor DarkGreen "> Copying $Path to $BackupPath\$Parentdirname-screenshots"
 		} catch {
 			Write-Error -ForegroundColor DarkYellow "> Error while trying to copy $Path."
 		}
@@ -57,6 +57,6 @@ if (-Not (Test-Path $BackupPath)) {
 }
 
 
-Write-Host -ForegroundColor DarkGreen "> Steam screenshot backup finished!"
-Write-Host -ForegroundColor DarkGreen "> Press Enter to exit..."
+Write-Information -ForegroundColor DarkGreen "> Steam screenshot backup finished!"
+Write-Information -ForegroundColor DarkGreen "> Press Enter to exit..."
 Read-Host
