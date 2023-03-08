@@ -23,14 +23,14 @@ PS C:\> Backup-SteamScreenshots -DestinationPath C:\Your\Backup\Path -Informatio
 
 ### Example run
 
-Powershell
-
+![backup](https://user-images.githubusercontent.com/31832259/223826237-4838d3b2-4355-48a8-8484-9372987d678a.png)
 
 
 <br/>
 
-Executable
+Write-Information enabled
 
+![backup-with-info](https://user-images.githubusercontent.com/31832259/223826320-8e3681a0-0d42-4772-8b9b-00fb1857e7c5.png)
 
 
 
