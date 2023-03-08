@@ -20,7 +20,7 @@
    		\  \  \- 345678-screenshots/
    		\  \  \  \- screenshot4.jpg
 .Parameter DestinationPath
-   [Mandatory!] Full destination path where the archive should be saved to.
+   [Mandatory!] Full destination path where the backup should be saved to.
 .NOTES
    Author: sysadt
 .LINK
