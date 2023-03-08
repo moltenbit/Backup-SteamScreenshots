@@ -1,5 +1,5 @@
 # Backup-SteamScreenshots
-A script to backup your Steam screenshot folders.
+A PowerShell module to backup your Steam screenshot folders.
 
 <br/>
 
